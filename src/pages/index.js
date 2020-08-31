@@ -1,9 +1,17 @@
 import Head from 'next/head';
 import styles from '../../styles/Home.module.css';
+import styled from 'styled-components'
+
+const Div = styled.div`
+	color: gray;
+	p {
+		color: red;
+	}
+`
 
 export default function Home() {
 	return (
-		<div className={styles.container}>
+		<Div>
 			<Head>
 				<title>Create Next App</title>
 				<link rel="icon" href="/favicon.ico" />
@@ -18,7 +26,7 @@ export default function Home() {
 					Get started by editing <code className={styles.code}>pages/index.js</code>
 				</p>
 
-				<div className={styles.grid}>
+				<Div>
 					<a href="https://nextjs.org/docs" className={styles.card}>
 						<h3>Documentation &rarr;</h3>
 						<p>Find in-depth information about Next.js features and API.</p>
@@ -41,7 +49,7 @@ export default function Home() {
 						<h3>Deploy &rarr;</h3>
 						<p>Instantly deploy your Next.js site to a public URL with Vercel.</p>
 					</a>
-				</div>
+				</Div>
 			</main>
 
 			<footer className={styles.footer}>
@@ -53,6 +61,6 @@ export default function Home() {
 					Powered by <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
 				</a>
 			</footer>
-		</div>
+		</Div>
 	);
 }
